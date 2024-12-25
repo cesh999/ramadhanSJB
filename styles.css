@@ -1,0 +1,293 @@
+/* Umum untuk seluruh teks */
+body {
+  font-family: 'Poppins', sans-serif; /* Ganti font dengan yang lebih modern */
+  color: #fff; /* Warna teks putih agar kontras dengan latar belakang */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+  margin: 0;
+  padding: 0;
+}
+/* Container untuk lentera */
+.lantern-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Lentera tidak akan menghalangi klik */
+  overflow: hidden;
+}
+
+/* Gaya untuk lentera */
+.lantern {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  background: url('lantern.png') no-repeat center/contain; /* Gambar lentera */
+  animation: float 5s ease-in-out infinite, drift 8s linear infinite;
+}
+
+/* Posisi awal acak untuk lentera */
+.lantern:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+.lantern:nth-child(2) {
+  left: 50%;
+  animation-delay: 2s;
+}
+.lantern:nth-child(3) {
+  left: 80%;
+  animation-delay: 4s;
+}
+
+/* Animasi melayang */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Animasi drift horizontal */
+@keyframes drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+/* Gaya untuk judul utama */
+header h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #f4d03f; /* Warna emas untuk kesan Islami */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/* Gaya untuk subjudul */
+header p {
+  font-size: 1.5em;
+  font-style: italic;
+  margin-top: 10px;
+  color: #a3d2a1; /* Warna hijau lembut */
+}
+
+/* Gaya untuk hitung mundur */
+#timer {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #e74c3c; /* Warna merah untuk menarik perhatian */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  margin: 20px 0;
+}
+
+/* Gaya untuk judul bagian */
+section h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #f39c12; /* Warna oranye emas */
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Gaya untuk kutipan Islami */
+#quote {
+  font-size: 1.5em;
+  font-style: italic;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.4); /* Latar belakang transparan */
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+}
+/* Latar belakang video */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Agar video berada di belakang konten */
+}
+
+/* Gaya untuk konten */
+body {
+  font-family: Arial, sans-serif;
+  color: #fff; /* Ubah warna teks agar kontras dengan video */
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.5); /* Tambahkan lapisan transparan untuk keterbacaan */
+}
+
+header, main, footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Efek muncul pada judul utama */
+header h1 {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Efek teks berkedip lembut pada timer */
+#timer {
+  animation: pulse 1.5s infinite;
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi Pulse */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  /* Efek muncul pada judul utama */
+header h1 {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Efek teks berkedip lembut pada timer */
+#timer {
+  color: #e74c3c;
+  text-shadow: 0 0 10px #e74c3c, 0 0 20px #e74c3c, 0 0 30px #e74c3c;
+  animation: glow 1.5s infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px #e74c3c, 0 0 20px #e74c3c, 0 0 30px #e74c3c;
+  }
+  50% {
+    text-shadow: 0 0 20px #e74c3c, 0 0 30px #e74c3c, 0 0 40px #e74c3c;
+  }
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi Pulse */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+/* Garis pembatas dengan pola */
+.section-divider {
+  height: 5px;
+  width: 100px;
+  background: linear-gradient(90deg, #f4d03f, #a3d2a1);
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* Efek hover pada judul bagian */
+section h2:hover {
+  color: #f4d03f;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efek hover pada kutipan Islami */
+#quote:hover {
+  background: linear-gradient(45deg, #2193b0, #6dd5ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}
+#music {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#music iframe {
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Ornamen di bagian atas dan bawah */
+.ornament-top, .ornament-bottom {
+  height: 10px;
+  width: 100%;
+  background: url('ornament.png') center/contain no-repeat; /* Gambar ornamen Islami */
+  margin: 10px 0;
+}
+#join-group button {
+  background-color: #25D366; /* Hijau WhatsApp */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#join-group button:hover {
+  background-color: #1DA1F2; /* Biru WhatsApp */
+}
+#join-group button {
+  background-color: #25D366; /* Hijau WhatsApp */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#join-group button:hover {
+  background-color: #1DA1F2; /* Biru WhatsApp */
+}
